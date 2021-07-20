@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cmt_proPic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/levi"/>
+        <TextView
+            android:id="@+id/cmt_username"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/cmt_proPic"
+            android:text="USerNAme"
+            android:textSize="20dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:fontFamily="@font/brandon_grotesque_black"/>
+        <RatingBar
+            android:id="@+id/cmt_usrRat"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cmt_proPic"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            />
+        <TextView
+            android:id="@+id/cmt_usrDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Desc"
+            android:layout_below="@id/cmt_usrRat"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/brandon_grotesque_light"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

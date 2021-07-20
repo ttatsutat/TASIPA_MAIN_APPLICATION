@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AttDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/AttPic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@drawable/attpic5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/detail_corner"
+        android:backgroundTint="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/white">
+            <TextView
+                android:id="@+id/AttName"
+                android:text="Mc Donald-Al Rayan"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="40dp"
+                android:layout_width="280dp"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:textSize="24sp"
+                />
+            <TextView
+                android:id="@+id/att_type"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:background="@color/lightWhite"
+                android:text="@string/Attraction"/>
+            <TextView
+                android:id="@+id/att_loc"
+                android:layout_toRightOf="@+id/att_type"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:background="@color/lightWhite"
+                android:text="@string/location"/>
+
+            <ImageView
+                android:id="@+id/fav_attBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+               android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_baseline_favorite_24"/>
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/map_attBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/send"/>
+            <RatingBar
+                android:id="@+id/att_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:numStars="5"
+                android:rating="5"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentBottom="true"/>
+            <TextView
+                android:id="@+id/att_ratingVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/att_rating"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:text="5.0"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/div1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/lightWhite" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/all_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/div1"
+            android:background="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+            <Button
+                android:id="@+id/attbutton2"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/secondary"
+                android:text="Detail"
+                android:textColor="@color/primary_dark"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/attbutton3"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="135dp"
+                android:layout_toEndOf="@+id/attbutton4"
+                android:background="#00FFFFFF"
+                android:text="Reviews"
+                android:textColor="@color/primary_dark"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/attbutton4"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/attbutton2"
+                android:background="#00FFFFFF"
+                android:text="Map"
+                android:textColor="@color/primary_dark"
+                android:textStyle="bold" />
+
+
+
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/attdetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/all_btn"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/att_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:gravity="center_vertical"
+                android:text="Description"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/att_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/att_head"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:fontFamily="@font/brandon_grotesque_medium_italic"
+                android:text="This is just a dummy text. It is used for testing UI. It doesn't mean anything. The sole purpose of this text is to see how our text will look like once data is added."
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/attmapLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/all_btn"
+            android:visibility="invisible">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="12dp">
+
+                <fragment
+                    android:id="@+id/attmap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:fadingEdge="none"
+                    android:paddingHorizontal="10pt"
+                    android:paddingVertical="10pt"
+                    tools:context=".MainActivity" />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/attreviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+            android:layout_below="@+id/all_btn"
+            android:visibility="visible"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/rate_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate this place"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:layout_alignParentTop="true"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:id="@+id/rate_txt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rate_txt"
+                android:text="Tell others what you think"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/brandon_grotesque_medium_italic"
+                android:textSize="16sp"
+                />
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/user_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srb_starSize="40dp"
+                app:srb_numberOfStars="5"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/rate_txt2"
+                app:srb_starsSeparation="35dp"
+                app:srb_rating="3"
+                app:srb_stepSize="0.5"
+                app:srb_borderColor="@color/grey"
+                app:srb_fillColor="@color/primary"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/att_cmntDes"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="280dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                app:counterEnabled="true"
+                android:layout_below="@+id/user_rate"
+                app:counterMaxLength="350">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:id="@+id/DescText"
+                    android:gravity="top"
+                    android:hint="Write a review" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/send_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/send"
+                android:layout_toRightOf="@+id/att_cmntDes"
+                android:layout_below="@+id/user_rate"
+                android:layout_marginTop="30dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All Comments"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:layout_below="@+id/att_cmntDes"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

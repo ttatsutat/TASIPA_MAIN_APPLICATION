@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Senior_project</string>
+    <string name="title_home">Home</string>
+    <string name="Emergency">Emergency</string>
+    <string name="Favourite">Favourite</string>
+    <string name="Promotions">Promotions</string>
+    <string name="Attraction">Attractions</string>
+    <string name="Trains">Trains</string>
+    <string name="Report">Report</string>
+    <string name="selected_item">Selected item:</string>
+    <string name="seemore">view all</string>
+    <string name="textView">TextView</string>
+    <string name="imgdes">Image Description</string>
+    <string-array name="Topics">
+        <item>Please Select..</item>
+        <item>Transportation issues</item>
+        <item>Road issues</item>
+        <item>Lighting</item>
+        <item>Trash management</item>
+        <item>Toiletries</item>
+        <item>Residential issues</item>
+        <item>Others</item>
+    </string-array>
+    <string name="Distance">Distance</string>
+
+    <string name="SignInText">Please sign in to continue</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="log_inBtn">LOG IN</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="register">Register</string>
+    <string name="newUser">New User? Register</string>
+    <string name="QRTxtfield">Add new QR code</string>
+    <string name="qr_code_name_optional">QR code name (optional)</string>
+    <string name="qr_code_name">QR code name</string>
+    <string name="RemoveQR">Remove this QR code</string>
+    <string name="TODO">CHANGE TO SCROLL VIEW</string>
+    <string name="addbtn">addbtn</string>
+    <string name="Select_Topic">Please Select a topic...</string>
+    <string name="date">Incident Date and time</string>
+    <string name="dateFormat">DD/MM/YYYY HH:MM</string>
+    <string name="description">Description</string>
+    <string name="descibe_the_situation">Descibe the situation...</string>
+    <string name="attachBtn">Attachments</string>
+    <string name="submitBtn">Submit</string>
+    <string name="re_password">Re-Type Password</string>
+    <string name="Terms_Conditions">I agree to TASIPA\'s Term of Services</string>
+    <string name="full_name">Full Name</string>
+    <string name="username">Username</string>
+    <string name="next">NEXT</string>
+    <string name="LogoImg">LogoImg</string>
+    <string name="signup">SignUp</string>
+    <string name="Category">Type of Services</string>
+    <string name="name">Name</string>
+    <string name="location">Location</string>
+    <string name="train_detail">Train detail</string>
+    <string name="depart_time">Depart Time</string>
+    <string name="departure_station">Departure Station</string>
+    <string name="arrive_time">Arrive Time</string>
+    <string name="destination_station">Destination Station</string>
+    <string name="flag">flag</string>
+    <string name="not_rated">Not Rated</string>
+    <string name="road_name">Road Name</string>
+    <string name="traffic_information">Traffic Information</string>
+    <string name="more">More info</string>
+    <string name="state_railway_of_thailand">State Railway of Thailand</string>
+    <string name="cityName">SALAYA</string>
+    <string name="name_palces_restaurants">name, palces, restaurants</string>
+    <string name="hello">Hello,</string>
+    <string name="TestTxt">TASIPA_USER</string>
+    <string name="greeting">Many things are waiting for you!</string>
+    <string name="events">Events</string>
+    <string name="amenity">Amenities</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="searchlogo">SearchLogo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_profile">Profile</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="profile_setting"><![CDATA[Profile & Setting]]></string>
+
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="30dp"
+    android:layout_margin="8dp"
+    app:cardMaxElevation="4dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageShow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/prom1" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/list_gradient"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:layout_above="@+id/textView1"
+            android:textColor="@color/white"
+            android:fontFamily="@font/brandon_grotesque_black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="-8dp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Category"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/brandon_grotesque_light"/>
+
+        <ImageView
+            android:id="@+id/ratingBar2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/star"
+            android:layout_marginRight="10dp"
+            android:layout_above="@+id/resDistance"
+            android:layout_marginBottom="2dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/resDistance"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Distance"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/vv12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.0"
+            android:textColor="@color/white"
+            android:layout_marginBottom="2dp"
+            android:textSize="18sp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ratingBar2"
+            android:layout_above="@+id/resDistance"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background"
+    tools:context=".AboutusActivity">
+
+    <RelativeLayout
+        android:id="@+id/Carousel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            app:fillColor="#FFFFFFFF"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/Carousel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/brandon_grotesque_black"
+            android:text="Group Members:" />
+
+      <androidx.cardview.widget.CardView
+          android:id="@id/info1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="5dp"
+          app:cardElevation="16dp"
+          app:cardCornerRadius="8dp"
+          android:layout_below="@+id/textView4">
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+              android:layout_marginTop="0dp">
+
+              <TextView
+                  android:id="@+id/textView5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="20dp"
+                  android:text="Name: "
+                  android:textSize="18dp" />
+
+              <TextView
+                  android:id="@+id/text5"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="100dp"
+                  android:layout_marginTop="19dp"
+                  android:textColor="@color/primary_light"
+                  android:text="Peerayos Lokwipas"
+                  android:textSize="19dp" />
+
+              <TextView
+                  android:id="@+id/textView6"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginTop="60dp"
+                  android:text="Nickname: "
+                  android:textSize="18dp" />
+
+              <TextView
+                  android:id="@+id/text6"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="130dp"
+                  android:layout_marginTop="59dp"
+                  android:textColor="@color/primary_light"
+                  android:text="Paint"
+                  android:textSize="19dp" />
+
+              <TextView
+                  android:id="@+id/textView7"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="220dp"
+                  android:layout_marginTop="60dp"
+                  android:text="ID: "
+                  android:textSize="18dp" />
+
+              <TextView
+                  android:id="@+id/text7"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="260dp"
+                  android:layout_marginTop="59dp"
+                  android:textColor="@color/primary_light"
+                  android:text="6081208"
+                  android:textSize="19dp" />
+          </RelativeLayout>
+      </androidx.cardview.widget.CardView>
+     <androidx.cardview.widget.CardView
+         android:id="@+id/info2"
+         android:layout_margin="5dp"
+         app:cardElevation="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info1"
+         app:cardCornerRadius="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Name: "
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="19dp"
+            android:textColor="@color/primary_light"
+            android:text="Sirendra Singh"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:text="Nickname: "
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="59dp"
+            android:textColor="@color/primary_light"
+            android:text="Jerry"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="60dp"
+            android:text="ID: "
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="59dp"
+            android:textColor="@color/primary_light"
+            android:text="6081262"
+            android:textSize="19dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/info3"
+    android:layout_margin="5dp"
+    app:cardElevation="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/info2"
+    app:cardCornerRadius="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Name: "
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="19dp"
+            android:textColor="@color/primary_light"
+            android:text="Napatkorn Assavakasem"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:text="Nickname: "
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="59dp"
+            android:textColor="@color/primary_light"
+            android:text="Tatsu"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="60dp"
+            android:text="ID: "
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="59dp"
+            android:textColor="@color/primary_light"
+            android:text="6081017"
+            android:textSize="19dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</RelativeLayout>

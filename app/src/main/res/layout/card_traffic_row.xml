@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:padding="30dp"
+    android:textAlignment="textStart"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="30dp"
+    app:cardMaxElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="398dp"
+        android:layout_height="96dp"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:text="@string/road_name"
+            android:textAlignment="viewStart"
+            android:textAllCaps="true"
+            android:textColor="#0094b7"
+            android:textSize="18sp"
+            android:textStyle="normal|bold|italic"
+            android:translationY="40dp" />
+
+        <TextView
+            android:id="@+id/TrafficInfo"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:text="@string/traffic_information"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="normal|italic"
+            android:translationX="235dp"
+            android:translationY="15dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

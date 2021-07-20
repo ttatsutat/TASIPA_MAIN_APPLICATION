@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PromoDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/promo_picholder"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <ImageView
+            android:id="@+id/shop_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_shop" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-45dp"
+        android:layout_below="@+id/promo_picholder"
+        android:background="@drawable/detail_corner"
+        android:backgroundTint="@color/white">
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/white">
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:text="Shop Name"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:id="@+id/promomapLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/shop_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="12dp">
+
+                    <fragment
+                        android:id="@+id/promo_map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:defaultFocusHighlightEnabled="false"
+                        android:fadingEdge="none"
+                        android:paddingHorizontal="0pt"
+                        android:paddingVertical="0pt"
+                        tools:context=".MainActivity" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/div1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/top"
+            android:background="@color/lightWhite" />
+
+        <RelativeLayout
+            android:id="@+id/promodetailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/div1"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:gravity="center_vertical"
+                android:text="Product Name"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/validText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="valid until: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/validShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/validText"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text="valid date"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/discountShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_name"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="100% DISCOUNT"
+                android:textColor="#F44336"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/fromText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountShow"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="From: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/InitPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountShow"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
+                android:text="Initial Price"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/toText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountShow"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:text="To: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/FinalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountShow"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="30dp"
+                android:text="Final Price"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/product_pic"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_below="@id/product_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:padding="5pt"
+                android:src="@drawable/arch" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

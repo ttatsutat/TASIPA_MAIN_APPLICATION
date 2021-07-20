@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background"
+    tools:context=".Allcategories">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:padding="10dp"
+                android:text="Categories"
+                android:textAllCaps="true"
+                android:textSize="26sp" />
+        </RelativeLayout>
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/cat_res"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:elevation="8dp"
+                android:background="@drawable/cat_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/brandon_grotesque_bold_italic"
+                    android:padding="30dp"
+                    android:text="@string/restaurants"
+                    android:textSize="32sp" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:elevation="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/restaurantnew" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <RelativeLayout
+                android:id="@+id/cat_eve"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:elevation="8dp"
+                android:background="@drawable/cat_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/brandon_grotesque_bold_italic"
+                    android:padding="25dp"
+                    android:text="@string/events"
+                    android:textSize="32sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="41dp"
+                android:elevation="9dp"
+                android:layout_marginTop="-9dp"
+                android:src="@drawable/band" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <RelativeLayout
+                android:id="@+id/cat_att"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:elevation="8dp"
+                android:background="@drawable/cat_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/brandon_grotesque_bold_italic"
+                    android:padding="30dp"
+                    android:text="@string/Attraction"
+                    android:textSize="32sp" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="148dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:elevation="9dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/attraction_th_update" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <RelativeLayout
+                android:id="@+id/cat_ame"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:elevation="8dp"
+                android:background="@drawable/cat_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/brandon_grotesque_bold_italic"
+                    android:padding="25dp"
+                    android:text="@string/amenity"
+                    android:textSize="32sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:layout_alignParentLeft="true"
+                android:elevation="9dp"
+                android:layout_marginTop="-40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/amenities" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <RelativeLayout
+                android:id="@+id/cat_eme"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:elevation="8dp"
+                android:background="@drawable/cat_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/brandon_grotesque_bold_italic"
+                    android:padding="30dp"
+                    android:text="@string/Emergency"
+                    android:textSize="32sp" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:elevation="9dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/emergencynew" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <RelativeLayout
+                android:id="@+id/cat_rep"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:elevation="8dp"
+                android:background="@drawable/cat_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/brandon_grotesque_bold_italic"
+                    android:padding="25dp"
+                    android:text="@string/Report"
+                    android:textSize="32sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
+                android:scaleType="fitXY"
+                android:elevation="9dp"
+                android:src="@drawable/reportnew" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <RelativeLayout
+                android:id="@+id/cat_train"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:elevation="8dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/cat_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/brandon_grotesque_bold_italic"
+                    android:padding="30dp"
+                    android:text="@string/Trains"
+                    android:textSize="32sp" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="220dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:elevation="9dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/train1" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <RelativeLayout
+                android:id="@+id/cat_pro"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:elevation="8dp"
+                android:background="@drawable/cat_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/brandon_grotesque_bold_italic"
+                    android:padding="25dp"
+                    android:text="@string/Promotions"
+                    android:textSize="32sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:scaleType="fitXY"
+                android:elevation="9dp"
+                android:src="@drawable/promo1" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

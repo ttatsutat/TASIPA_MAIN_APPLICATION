@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/home_background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:tint="@color/primary_dark" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/brandon_grotesque_black"
+            android:text="@string/Attraction"
+            android:textColor="@color/primary_dark"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_search"
+            android:tint="@color/primary_dark" />
+        <ImageView
+            android:id="@+id/sort_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_sort"
+            android:tint="@color/primary_dark" />
+    </RelativeLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+        <RelativeLayout
+            android:id="@+id/att_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/home_background">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/all"
+                android:onClick="filter_Att"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:id="@+id/all_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="All"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Ancient"
+                android:onClick="filter_Att"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                android:layout_toRightOf="@+id/all"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:id="@+id/Ancient_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Ancient"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Aquarium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Att"
+                android:layout_toRightOf="@+id/filter_Ancient">
+
+                <TextView
+                    android:id="@+id/Aquarium_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Aquarium"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_ArtGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Att"
+                android:layout_toRightOf="@+id/filter_Aquarium">
+
+                <TextView
+                    android:id="@+id/ArtGallery_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Art Gallery"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Educational"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Att"
+                android:layout_toRightOf="@+id/filter_ArtGallery">
+
+                <TextView
+                    android:id="@+id/Educational_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Educational"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Museum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Att"
+                android:layout_toRightOf="@+id/filter_Educational">
+
+                <TextView
+                    android:id="@+id/Museum_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Museum"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Religious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Att"
+                android:layout_toRightOf="@+id/filter_Museum">
+
+                <TextView
+                    android:id="@+id/Religious_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Religious"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Att"
+                android:layout_toRightOf="@+id/filter_Religious">
+
+                <TextView
+                    android:id="@+id/Other_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Other"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </HorizontalScrollView>
+<RelativeLayout
+    android:id="@+id/search_view"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginRight="40dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/circle"
+    android:elevation="8dp"
+    android:visibility="gone">
+
+    <EditText
+        android:id="@+id/att_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:hint="Search here"
+        android:textColor="#3f3f3f" />
+
+</RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/attList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_background" />
+
+    <RelativeLayout
+        android:id="@+id/noItemShow4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/defaultui" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center"
+            android:text="No items to show"
+            android:textColor="@color/primary_dark"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</LinearLayout>

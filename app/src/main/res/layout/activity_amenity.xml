@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/home_background"
+    tools:context=".AmenityActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:tint="@color/primary_dark" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/brandon_grotesque_black"
+            android:text="@string/amenity"
+            android:textColor="@color/primary_dark"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_search"
+            android:tint="@color/primary_dark" />
+        <ImageView
+            android:id="@+id/sort_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_sort"
+            android:tint="@color/primary_dark" />
+    </RelativeLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+        <RelativeLayout
+            android:id="@+id/ame_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/home_background">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/all"
+                android:onClick="filter_Amen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:id="@+id/all_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="All"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Bank"
+                android:onClick="filter_Amen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                android:layout_toRightOf="@+id/all"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:id="@+id/Bank_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Bank"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_BeautySalon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_Bank">
+
+                <TextView
+                    android:id="@+id/BeautySalon_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Beauty Salon"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_CopyShop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_BeautySalon">
+
+                <TextView
+                    android:id="@+id/CopyShop_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Copy Shop"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_ClothingStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_CopyShop">
+
+                <TextView
+                    android:id="@+id/ClothingStore_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Clothing Store"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_DentalClinic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_ClothingStore">
+
+                <TextView
+                    android:id="@+id/DentalClinic_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Dental Clinic"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Fuel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_DentalClinic">
+
+                <TextView
+                    android:id="@+id/Fuel_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Gas Station"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_HairSalon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_Fuel">
+
+                <TextView
+                    android:id="@+id/HairSalon_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Hair Salon"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_Pharmacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_HairSalon">
+
+                <TextView
+                    android:id="@+id/Pharmacy_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Pharmacy"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_GameStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_Pharmacy">
+
+                <TextView
+                    android:id="@+id/GameStore_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Game"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_MassageSpa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_GameStore">
+
+                <TextView
+                    android:id="@+id/MassageSpa_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Massage"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_PostOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_MassageSpa">
+
+                <TextView
+                    android:id="@+id/PostOffice_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Post Office"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/filter_AmeOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/home_background"
+                app:cardCornerRadius="16dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="filter_Amen"
+                android:layout_toRightOf="@+id/filter_PostOffice">
+
+                <TextView
+                    android:id="@+id/AmeOther_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cat_card"
+                    android:fontFamily="@font/brandon_grotesque_black"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Other"
+                    android:textSize="15sp" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </HorizontalScrollView>
+    <RelativeLayout
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/circle"
+        android:elevation="8dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/ame_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:backgroundTint="#FFFFFF"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:hint="Search here"
+            android:textColor="#3f3f3f" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/amenList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_background" />
+
+    <RelativeLayout
+        android:id="@+id/noItemShow3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="100dp"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/defaultui" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center"
+            android:text="No items to show"
+            android:textColor="@color/primary_dark"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</LinearLayout>

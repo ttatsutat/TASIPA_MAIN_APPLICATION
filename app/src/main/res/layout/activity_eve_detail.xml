@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/eve_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@drawable/attpic5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/detail_corner"
+        android:backgroundTint="@color/white">
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/white">
+            <TextView
+                android:id="@+id/eve_name"
+                android:text="Mc Donald-Al Rayan"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="40dp"
+                android:layout_width="280dp"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:textSize="24sp"
+                />
+
+            <ImageView
+                android:id="@+id/paint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="52dp"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/eve_loc"
+                android:layout_toRightOf="@+id/paint"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:background="@color/lightWhite"
+                android:text="@string/location"/>
+            <TextView
+                android:id="@+id/eve_type"
+                android:layout_toRightOf="@+id/eve_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:background="@color/lightWhite"
+                android:text="@string/amenity"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/div1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/top"
+            android:background="@color/lightWhite" />
+
+        <RelativeLayout
+            android:id="@+id/eve_detailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/div1"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/eve_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/brandon_grotesque_black"
+                android:gravity="center_vertical"
+                android:text="Description"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/eve_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eve_head"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:fontFamily="@font/brandon_grotesque_medium_italic"
+                android:text="This is just a dummy text. It is used for testing UI. It doesn't mean anything. The sole purpose of this text is to see how our text will look like once data is added."
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
